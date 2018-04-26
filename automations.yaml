@@ -6,6 +6,34 @@
         entity_id: zwave.livingroom_spots
         scene_id: 14
     action:
+      - service: homeassistant.toggle
+        entity_id:
+          - group.livingroom_lights
+      - service: notify.marvin_telegram
+        data:
+          message: 'Lights toggled'
+
+  - alias: Telegram start
+    trigger:
+      platform: event
+      event_type: telegram_command
+      event_data:
+        command: '/start'
+    action:
+      service: notify.marvin_telegram
+      data:
+        message: 'commands'
+        data:
+          keyboard:
+            - '/lights'
+
+  - alias: Telegram light control
+    trigger:
+      platform: event
+      event_type: telegram_command
+      event_data:
+        command: '/lights'
+    action:
       service: homeassistant.toggle
       entity_id:
         - group.livingroom_lights
