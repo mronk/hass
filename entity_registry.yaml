@@ -1,0 +1,60 @@
+climate.living_room:
+  name: Nest
+  platform: nest
+  unique_id: Zfw_usJ3YUieDjr937Hul72N3SClpZuW
+light.livingroomspots_level_2:
+  name: Livingroom Spots 2
+  platform: zwave
+  unique_id: 3-144115188131004417
+light.livingroomspots_level:
+  name: Livingroom Spots
+  platform: zwave
+  unique_id: 3-72057594093076481
+sensor.livingroomspots_power:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093256770
+sensor.livingroomspots_energy:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093273090
+sensor.livingroomspots_power_2:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093273218
+sensor.livingroomspots_exporting:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093273600
+sensor.livingroomspots_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305281
+sensor.livingroomspots_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305297
+sensor.livingroomspots_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305313
+sensor.livingroomspots_heat:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305393
+sensor.livingroomspots_power_management:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305457
+sensor.livingroomspots_system:
+  name:
+  platform: zwave
+  unique_id: 3-72057594094305473
+media_player.ronkcast:
+  name: RonkCast
+  platform: cast
+  unique_id: 57a82e64-6a19-839f-b633-0949116fb60a
+media_player.chromecastle:
+  name:
+  platform: cast
+  unique_id: 4f73b70f-26ba-d17a-98dc-39c16a4c13ff

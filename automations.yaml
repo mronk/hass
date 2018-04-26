@@ -1,0 +1,11 @@
+  - alias: Livingroom Double Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.livingroom_spots
+        scene_id: 14
+    action:
+      service: homeassistant.toggle
+      entity_id:
+        - group.livingroom_lights

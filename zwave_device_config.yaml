@@ -1,0 +1,21 @@
+light.livingroomspots_level:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_exporting:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_power_management:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_system:
+  ignored: true
+  polling_intensity: 0
