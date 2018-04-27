@@ -1,4 +1,4 @@
-    "sensor.livingroomspots_*":
+    "sensor.living_room_spots_*":
       hidden: true
-    "sensor.masterbedroomspots_*":
+    "sensor.master_bedroom_spots_*":
       hidden: true

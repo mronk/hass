@@ -2,51 +2,51 @@ climate.living_room:
   name: Nest
   platform: nest
   unique_id: Zfw_usJ3YUieDjr937Hul72N3SClpZuW
-light.livingroomspots_level_2:
-  name: Livingroom Spots 2
+light.living_room_spots_level_2:
+  name:
   platform: zwave
   unique_id: 3-144115188131004417
-light.livingroomspots_level:
-  name: Livingroom Spots
+light.living_room_spots_level:
+  name: Living Room Spots
   platform: zwave
   unique_id: 3-72057594093076481
-sensor.livingroomspots_power:
+sensor.living_room_spots_power:
   name:
   platform: zwave
   unique_id: 3-72057594093256770
-sensor.livingroomspots_energy:
+sensor.living_room_spots_energy:
   name:
   platform: zwave
   unique_id: 3-72057594093273090
-sensor.livingroomspots_power_2:
+sensor.living_room_spots_power_2:
   name:
   platform: zwave
   unique_id: 3-72057594093273218
-sensor.livingroomspots_exporting:
+sensor.living_room_spots_exporting:
   name:
   platform: zwave
   unique_id: 3-72057594093273600
-sensor.livingroomspots_alarm_type:
+sensor.living_room_spots_alarm_type:
   name:
   platform: zwave
   unique_id: 3-72057594094305281
-sensor.livingroomspots_alarm_level:
+sensor.living_room_spots_alarm_level:
   name:
   platform: zwave
   unique_id: 3-72057594094305297
-sensor.livingroomspots_sourcenodeid:
+sensor.living_room_spots_sourcenodeid:
   name:
   platform: zwave
   unique_id: 3-72057594094305313
-sensor.livingroomspots_heat:
+sensor.living_room_spots_heat:
   name:
   platform: zwave
   unique_id: 3-72057594094305393
-sensor.livingroomspots_power_management:
+sensor.living_room_spots_power_management:
   name:
   platform: zwave
   unique_id: 3-72057594094305457
-sensor.livingroomspots_system:
+sensor.living_room_spots_system:
   name:
   platform: zwave
   unique_id: 3-72057594094305473
@@ -58,51 +58,51 @@ media_player.chromecastle:
   name:
   platform: cast
   unique_id: 4f73b70f-26ba-d17a-98dc-39c16a4c13ff
-light.masterbedroomspots_level:
-  name:
+light.master_bedroom_spots_level:
+  name: Master Bedroom Spots
   platform: zwave
   unique_id: 4-72057594109853697
-light.masterbedroomspots_level_2:
+light.master_bedroom_spots_level_2:
   name:
   platform: zwave
   unique_id: 4-144115188147781633
-sensor.masterbedroomspots_power:
+sensor.master_bedroom_spots_power:
   name:
   platform: zwave
   unique_id: 4-72057594110033986
-sensor.masterbedroomspots_energy:
+sensor.master_bedroom_spots_energy:
   name:
   platform: zwave
   unique_id: 4-72057594110050306
-sensor.masterbedroomspots_power_2:
+sensor.master_bedroom_spots_power_2:
   name:
   platform: zwave
   unique_id: 4-72057594110050434
-sensor.masterbedroomspots_exporting:
+sensor.master_bedroom_spots_exporting:
   name:
   platform: zwave
   unique_id: 4-72057594110050816
-sensor.masterbedroomspots_alarm_type:
+sensor.master_bedroom_spots_alarm_type:
   name:
   platform: zwave
   unique_id: 4-72057594111082497
-sensor.masterbedroomspots_alarm_level:
+sensor.master_bedroom_spots_alarm_level:
   name:
   platform: zwave
   unique_id: 4-72057594111082513
-sensor.masterbedroomspots_sourcenodeid:
+sensor.master_bedroom_spots_sourcenodeid:
   name:
   platform: zwave
   unique_id: 4-72057594111082529
-sensor.masterbedroomspots_heat:
+sensor.master_bedroom_spots_heat:
   name:
   platform: zwave
   unique_id: 4-72057594111082609
-sensor.masterbedroomspots_power_management:
+sensor.master_bedroom_spots_power_management:
   name:
   platform: zwave
   unique_id: 4-72057594111082673
-sensor.masterbedroomspots_system:
+sensor.master_bedroom_spots_system:
   name:
   platform: zwave
   unique_id: 4-72057594111082689

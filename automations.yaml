@@ -1,14 +1,14 @@
-  - alias: Livingroom Double Click
+  - alias: Living Room Double-Click
     trigger:
       platform: event
       event_type: zwave.scene_activated
       event_data:
-        entity_id: zwave.livingroom_spots
+        entity_id: zwave.living_room_spots
         scene_id: 14
     action:
       - service: homeassistant.toggle
         entity_id:
-          - group.livingroom_lights
+          - group.living_room_lights
       - service: notify.marvin_telegram
         data:
           message: 'Lights toggled'
@@ -36,4 +36,4 @@
     action:
       service: homeassistant.toggle
       entity_id:
-        - group.livingroom_lights
+        - group.living_room_lights
