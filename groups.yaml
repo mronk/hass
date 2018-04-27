@@ -6,21 +6,31 @@
       - media_player.ronkcast
       - group.livingroom_nest
 
-  livingroom_lights:  
-    name: Livingroom Lights
+  master_bedroom_view:
+    name: Master Bedroom
+    view: true
     entities:
-      - light.livingroomspots_level
+      - group.masterbedroom_lights
+      - media_player.chromecastle
+
+  masterbedroom_lights:
+    name: Master Bedroom Lights
+    entities:
+      - light.masterbedroomspots_level
   
   livingroom_nest:
     name: Livingroom Nest
     entities:
       - climate.living_room
-      - sensor.living_room_thermostat_temperature
-      - sensor.living_room_thermostat_target
       - sensor.living_room_thermostat_humidity
       - binary_sensor.living_room_thermostat_online
-      - binary_sensor.hallway_nest_protect_online
       - binary_sensor.living_room_nest_protect_online
+      - binary_sensor.hallway_nest_protect_online
+
+  livingroom_lights:
+    name: Livingroom Lights
+    entities:
+      - light.livingroomspots_level
 
   weather:
     name: Weather

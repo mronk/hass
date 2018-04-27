@@ -1,4 +1,4 @@
-light.livingroomspots_level:
+light.livingroomspots_level_2:
   ignored: true
   polling_intensity: 0
 sensor.livingroomspots_alarm_level:
@@ -7,7 +7,19 @@ sensor.livingroomspots_alarm_level:
 sensor.livingroomspots_alarm_type:
   ignored: true
   polling_intensity: 0
+sensor.livingroomspots_energy:
+  ignored: true
+  polling_intensity: 0
 sensor.livingroomspots_exporting:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_heat:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_power_2:
+  ignored: true
+  polling_intensity: 0
+sensor.livingroomspots_power:
   ignored: true
   polling_intensity: 0
 sensor.livingroomspots_power_management:
@@ -17,5 +29,35 @@ sensor.livingroomspots_sourcenodeid:
   ignored: true
   polling_intensity: 0
 sensor.livingroomspots_system:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_energy:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_exporting:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_heat:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_power:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_power_2:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_power_management:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.masterbedroomspots_system:
   ignored: true
   polling_intensity: 0

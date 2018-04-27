@@ -58,3 +58,51 @@ media_player.chromecastle:
   name:
   platform: cast
   unique_id: 4f73b70f-26ba-d17a-98dc-39c16a4c13ff
+light.masterbedroomspots_level:
+  name:
+  platform: zwave
+  unique_id: 4-72057594109853697
+light.masterbedroomspots_level_2:
+  name:
+  platform: zwave
+  unique_id: 4-144115188147781633
+sensor.masterbedroomspots_power:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110033986
+sensor.masterbedroomspots_energy:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050306
+sensor.masterbedroomspots_power_2:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050434
+sensor.masterbedroomspots_exporting:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050816
+sensor.masterbedroomspots_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.masterbedroomspots_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082513
+sensor.masterbedroomspots_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.masterbedroomspots_heat:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082609
+sensor.masterbedroomspots_power_management:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082673
+sensor.masterbedroomspots_system:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082689
