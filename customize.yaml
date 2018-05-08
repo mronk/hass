@@ -1,5 +1,7 @@
     light.living_room_spots_level_2:
       hidden: true
+    light.bedroom_spots_level_2:
+      hidden: true
     sensor.living_room_thermostat_temperature:
       hidden: true
     sensor.living_room_thermostat_target:

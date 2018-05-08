@@ -6,17 +6,17 @@
       - media_player.ronkcast
       - group.living_room_nest
 
-  master_bedroom_view:
-    name: Master Bedroom
+  bedroom_view:
+    name: Bedroom
     view: true
     entities:
-      - group.masterbedroom_lights
+      - group.bedroom_lights
       - media_player.chromecastle
 
-  masterbedroom_lights:
-    name: Master Bedroom Lights
+  bedroom_lights:
+    name: Bedroom Lights
     entities:
-      - light.master_bedroom_spots_level
+      - light.bedroom_spots_level
       - light.nightlight_marvin
   
   living_room_nest:
