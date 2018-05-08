@@ -106,3 +106,23 @@ sensor.master_bedroom_spots_system:
   name:
   platform: zwave
   unique_id: 4-72057594111082689
+light.cabinet_light:
+  name:
+  platform: tradfri
+  unique_id: light-7e21295204400049-65540
+light.tv_light:
+  name:
+  platform: tradfri
+  unique_id: light-7e21295204400049-65539
+light.nightlight_marvin:
+  name:
+  platform: tradfri
+  unique_id: light-7e21295204400049-65537
+light.master_bedroom:
+  name:
+  platform: tradfri
+  unique_id: group-7e21295204400049-131073
+light.living_room:
+  name:
+  platform: tradfri
+  unique_id: group-7e21295204400049-131074

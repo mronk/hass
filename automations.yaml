@@ -9,9 +9,9 @@
       - service: homeassistant.toggle
         entity_id:
           - group.living_room_lights
-      - service: notify.marvin_telegram
-        data:
-          message: 'Lights toggled'
+ #      - service: notify.marvin_telegram
+ #       data:
+ #         message: 'Lights toggled'
 
   - alias: Telegram start
     trigger:

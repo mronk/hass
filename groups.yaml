@@ -17,6 +17,7 @@
     name: Master Bedroom Lights
     entities:
       - light.master_bedroom_spots_level
+      - light.nightlight_marvin
   
   living_room_nest:
     name: Living Room Nest
@@ -31,6 +32,8 @@
     name: Living Room Lights
     entities:
       - light.living_room_spots_level
+      - light.tv_light
+      - light.cabinet_light
 
   weather:
     name: Weather
