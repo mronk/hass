@@ -2,54 +2,6 @@ climate.living_room:
   name: Nest
   platform: nest
   unique_id: Zfw_usJ3YUieDjr937Hul72N3SClpZuW
-light.living_room_spots_level_2:
-  name:
-  platform: zwave
-  unique_id: 3-144115188131004417
-light.living_room_spots_level:
-  name: Living Room Spots
-  platform: zwave
-  unique_id: 3-72057594093076481
-sensor.living_room_spots_power:
-  name:
-  platform: zwave
-  unique_id: 3-72057594093256770
-sensor.living_room_spots_energy:
-  name:
-  platform: zwave
-  unique_id: 3-72057594093273090
-sensor.living_room_spots_power_2:
-  name:
-  platform: zwave
-  unique_id: 3-72057594093273218
-sensor.living_room_spots_exporting:
-  name:
-  platform: zwave
-  unique_id: 3-72057594093273600
-sensor.living_room_spots_alarm_type:
-  name:
-  platform: zwave
-  unique_id: 3-72057594094305281
-sensor.living_room_spots_alarm_level:
-  name:
-  platform: zwave
-  unique_id: 3-72057594094305297
-sensor.living_room_spots_sourcenodeid:
-  name:
-  platform: zwave
-  unique_id: 3-72057594094305313
-sensor.living_room_spots_heat:
-  name:
-  platform: zwave
-  unique_id: 3-72057594094305393
-sensor.living_room_spots_power_management:
-  name:
-  platform: zwave
-  unique_id: 3-72057594094305457
-sensor.living_room_spots_system:
-  name:
-  platform: zwave
-  unique_id: 3-72057594094305473
 media_player.ronkcast:
   name: RonkCast
   platform: cast
@@ -58,50 +10,6 @@ media_player.chromecastle:
   name:
   platform: cast
   unique_id: 4f73b70f-26ba-d17a-98dc-39c16a4c13ff
-light.master_bedroom_spots_level:
-  name: Master Bedroom Spots
-  platform: zwave
-  unique_id: 4-72057594109853697
-light.master_bedroom_spots_level_2:
-  name:
-  platform: zwave
-  unique_id: 4-144115188147781633
-sensor.master_bedroom_spots_power:
-  name:
-  platform: zwave
-  unique_id: 4-72057594110033986
-sensor.master_bedroom_spots_energy:
-  name:
-  platform: zwave
-  unique_id: 4-72057594110050306
-sensor.master_bedroom_spots_power_2:
-  name:
-  platform: zwave
-  unique_id: 4-72057594110050434
-sensor.master_bedroom_spots_exporting:
-  name:
-  platform: zwave
-  unique_id: 4-72057594110050816
-sensor.master_bedroom_spots_alarm_type:
-  name:
-  platform: zwave
-  unique_id: 4-72057594111082497
-sensor.master_bedroom_spots_alarm_level:
-  name:
-  platform: zwave
-  unique_id: 4-72057594111082513
-sensor.master_bedroom_spots_sourcenodeid:
-  name:
-  platform: zwave
-  unique_id: 4-72057594111082529
-sensor.master_bedroom_spots_heat:
-  name:
-  platform: zwave
-  unique_id: 4-72057594111082609
-sensor.master_bedroom_spots_power_management:
-  name:
-  platform: zwave
-  unique_id: 4-72057594111082673
 sensor.master_bedroom_spots_system:
   name:
   platform: zwave
