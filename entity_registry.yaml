@@ -35,7 +35,7 @@ light.living_room:
   platform: tradfri
   unique_id: group-7e21295204400049-131074
 light.living_room_spots_level:
-  name:
+  name: Living Room Spots
   platform: zwave
   unique_id: 2-72057594076299265
 light.living_room_spots_level_2:
@@ -83,7 +83,7 @@ sensor.living_room_spots_system:
   platform: zwave
   unique_id: 2-72057594077528257
 light.bedroom_spots_level:
-  name:
+  name: Bedroom Spots
   platform: zwave
   unique_id: 3-72057594093076481
 light.bedroom_spots_level_2:
