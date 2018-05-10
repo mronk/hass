@@ -6,9 +6,44 @@
         entity_id: zwave.living_room_spots
         scene_id: 14
     action:
-      - service: homeassistant.toggle
-        entity_id:
-          - group.living_room_lights
+      service_template: >
+        homeassistant.turn_{% if is_state('group.living_room_lights', 'on') %}off{% else %}on{% endif %}
+      entity_id: group.living_room_lights
+
+  - alias: Bedroom Double-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.bedroom_spots
+        scene_id: 14
+    action:
+      service_template: >
+        homeassistant.turn_{% if is_state('group.bedroom_lights', 'on') %}off{% else %}on{% endif %}
+      entity_id: group.bedroom_lights
+
+  - alias: Bedroom 2nd Button Single-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.bedroom_spots
+        scene_id: 26
+    action:
+      service: light.toggle
+      entity_id: light.nightlight_marvin
+
+  - alias: Bedroom 2nd Button Tripple-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.bedroom_spots
+        scene_id: 25
+    action:
+     service: homeassistant.turn_off
+     entity_id: group.all_lights
+
  #      - service: notify.marvin_telegram
  #       data:
  #         message: 'Lights toggled'
