@@ -33,7 +33,7 @@
       service: light.toggle
       entity_id: light.nightlight_marvin
 
-  - alias: Bedroom 2nd Button Tripple-Click
+  - alias: Bedroom 2nd Button Triple-Click
     trigger:
       platform: event
       event_type: zwave.scene_activated
