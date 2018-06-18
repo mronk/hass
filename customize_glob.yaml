@@ -1,4 +1,14 @@
-    "sensor.living_room_spots_*":
+    "sensor.office_spots_*":
       hidden: true
     "sensor.bedroom_spots_*":
+      hidden: true
+    "sensor.living_room_spots_*":
+      hidden: true
+    "sensor.fireplace_spots_*":
+      hidden: true
+    "sensor.mid_room_spots_*":
+      hidden: true
+    "sensor.dinner_table_lights_*":
+      hidden: true
+    "sensor.kitchen_spots_*":
       hidden: true

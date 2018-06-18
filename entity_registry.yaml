@@ -10,10 +10,6 @@ media_player.chromecastle:
   name:
   platform: cast
   unique_id: 4f73b70f-26ba-d17a-98dc-39c16a4c13ff
-sensor.master_bedroom_spots_system:
-  name:
-  platform: zwave
-  unique_id: 4-72057594111082689
 light.cabinet_light:
   name:
   platform: tradfri
@@ -134,3 +130,243 @@ media_player.living_room_speaker:
   name:
   platform: cast
   unique_id: 29eefd60-acc9-7fed-992e-b7d0fe78d0d2
+light.living_room_spots_level:
+  name:
+  platform: zwave
+  unique_id: 4-72057594109853697
+light.living_room_spots_level_2:
+  name:
+  platform: zwave
+  unique_id: 4-144115188147781633
+sensor.living_room_spots_power:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110033986
+sensor.living_room_spots_energy:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050306
+sensor.living_room_spots_power_2:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050434
+sensor.living_room_spots_exporting:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050816
+sensor.living_room_spots_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.living_room_spots_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082513
+sensor.living_room_spots_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.living_room_spots_heat:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082609
+sensor.living_room_spots_power_management:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082673
+sensor.living_room_spots_system:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082689
+light.fireplace_spots_level:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126630913
+light.fireplace_spots_level_2:
+  name:
+  platform: zwave
+  unique_id: 5-144115188164558849
+sensor.fireplace_spots_power:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126811202
+sensor.fireplace_spots_energy:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126827522
+sensor.fireplace_spots_power_2:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126827650
+sensor.fireplace_spots_exporting:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126828032
+sensor.fireplace_spots_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859713
+sensor.fireplace_spots_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859729
+sensor.fireplace_spots_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859745
+sensor.fireplace_spots_heat:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859825
+sensor.fireplace_spots_power_management:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859889
+sensor.fireplace_spots_system:
+  name:
+  platform: zwave
+  unique_id: 5-72057594127859905
+light.mid_room_spots_level:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143408129
+light.mid_room_spots_level_2:
+  name:
+  platform: zwave
+  unique_id: 6-144115188181336065
+sensor.mid_room_spots_power:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143588418
+sensor.mid_room_spots_energy:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143604738
+sensor.mid_room_spots_power_2:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143604866
+sensor.mid_room_spots_exporting:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143605248
+sensor.mid_room_spots_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636929
+sensor.mid_room_spots_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636945
+sensor.mid_room_spots_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636961
+sensor.mid_room_spots_heat:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637041
+sensor.mid_room_spots_power_management:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637105
+sensor.mid_room_spots_system:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637121
+light.dinner_table_lights_level:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160185345
+light.dinner_table_lights_level_2:
+  name:
+  platform: zwave
+  unique_id: 7-144115188198113281
+sensor.dinner_table_lights_power:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160365634
+sensor.dinner_table_lights_energy:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160381954
+sensor.dinner_table_lights_power_2:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160382082
+sensor.dinner_table_lights_exporting:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160382464
+sensor.dinner_table_lights_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414145
+sensor.dinner_table_lights_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414161
+sensor.dinner_table_lights_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414177
+sensor.dinner_table_lights_heat:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414257
+sensor.dinner_table_lights_power_management:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414321
+sensor.dinner_table_lights_system:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414337
+light.kitchen_spots_level:
+  name:
+  platform: zwave
+  unique_id: 8-72057594176962561
+light.kitchen_spots_level_2:
+  name:
+  platform: zwave
+  unique_id: 8-144115188214890497
+sensor.kitchen_spots_power:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177142850
+sensor.kitchen_spots_energy:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159170
+sensor.kitchen_spots_power_2:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159298
+sensor.kitchen_spots_exporting:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177159680
+sensor.kitchen_spots_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191361
+sensor.kitchen_spots_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191377
+sensor.kitchen_spots_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191393
+sensor.kitchen_spots_heat:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191473
+sensor.kitchen_spots_power_management:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191537
+sensor.kitchen_spots_system:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191553

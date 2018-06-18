@@ -1,6 +1,16 @@
-    light.living_room_spots_level_2:
+    light.office_spots_level_2:
       hidden: true
     light.bedroom_spots_level_2:
+      hidden: true
+    light.living_room_spots_level_2:
+      hidden: true
+    light.fireplace_spots_level_2:
+      hidden: true
+    light.mid_room_spots_level_2:
+      hidden: true
+    light.dinner_table_lights_level_2:
+      hidden: true
+    light.kitchen_spots_level_2:
       hidden: true
     sensor.living_room_thermostat_temperature:
       hidden: true

@@ -1,22 +1,54 @@
-  living_room_view:
-    name: Living Room
+  living_area_view:
+    name: Living Area
+    icon: mdi:home
     view: true
     entities:
       - group.living_room_lights
+      - group.kitchen_lights
       - media_player.ronkcast
       - media_player.living_room_speaker
       - group.living_room_nest
-      - sensor.living_room_remote
-      - group.living_room_automations
 
   bedroom_view:
     name: Bedroom
+    icon: mdi:hotel
     view: true
     entities:
       - group.bedroom_lights
       - media_player.chromecastle
+
+  office_view:
+    name: Office
+    icon: mdi:monitor
+    view: true
+    entities:
+      - group.office_lights
+
+  sensor_view:
+    name: Sensors
+    icon: mdi:sitemap
+    view: true
+    entities:
+      - device_tracker.marvin_g5plus
+      - sensor.living_room_remote
       - sensor.bedroom_remote_marvin
+      - group.weather
+      - group.zwave_devices
+      - group.all_automations
+      - group.living_room_automations
       - group.bedroom_automations
+
+  zwave_devices:
+    name: Z-Wave devices
+    entities:
+      - zwave.aeotec_zw090_zstick_gen5_eu
+      - zwave.bedroom_spots
+      - zwave.office_spots
+      - zwave.living_room_spots
+      - zwave.fireplace_spots
+      - zwave.mid_room_spots
+      - zwave.dinner_table_lights
+      - zwave.kitchen_spots
 
   bedroom_lights:
     name: Bedroom Lights
@@ -44,13 +76,26 @@
     name: Living Room Lights
     entities:
       - light.living_room_spots_level
-      - light.tv_light
-      - light.cabinet_light
+      - light.fireplace_spots_level
+      - light.mid_room_spots_level
+      # - light.tv_light
+      # - light.cabinet_light
 
   living_room_automations:
     name: Living Room Automations
     entities:
       - automation.living_room_doubleclick
+
+  kitchen_lights:
+    name: Kitchen Lights
+    entities:
+      - light.kitchen_spots_level
+      - light.dinner_table_lights_level
+
+  office_lights:
+    name: Office Lights
+    entities:
+      - light.office_spots_level  
 
   weather:
     name: Weather
