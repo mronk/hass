@@ -6,7 +6,7 @@
         entity_id: zwave.kitchen_spots
         scene_id: 14
     action:
-      service: script.toggle_kitchen_lights
+      service: script.toggle_downstairs_lights
 
   - alias: Living Room Spots Double-Click
     trigger:
