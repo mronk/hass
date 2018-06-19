@@ -1,4 +1,5 @@
-  living_area_view:
+  #living_area_view:
+  default_view:
     name: Living Area
     icon: mdi:home
     view: true
@@ -35,8 +36,7 @@
       - group.weather
       - group.zwave_devices
       - group.all_automations
-      - group.living_room_automations
-      - group.bedroom_automations
+      - group.all_scripts
 
   zwave_devices:
     name: Z-Wave devices
@@ -53,15 +53,8 @@
   bedroom_lights:
     name: Bedroom Lights
     entities:
-      - light.bedroom_spots_level
+      - light.bedroom_spots
       - light.nightlight_marvin
-  
-  bedroom_automations:
-    name: Bedroom Automations
-    entities:
-      - automation.bedroom_doubleclick
-      - automation.bedroom_2nd_button_singleclick
-      - automation.bedroom_2nd_button_tripleclick
 
   living_room_nest:
     name: Living Room Nest
@@ -75,27 +68,31 @@
   living_room_lights:
     name: Living Room Lights
     entities:
-      - light.living_room_spots_level
-      - light.fireplace_spots_level
-      - light.mid_room_spots_level
+      - light.living_room_spots
+      - light.fireplace_spots
+      - light.mid_room_spots
       # - light.tv_light
       # - light.cabinet_light
 
-  living_room_automations:
-    name: Living Room Automations
+  downstairs_lights:
+    name: Downstairs
     entities:
-      - automation.living_room_doubleclick
+      - light.living_room_spots
+      - light.fireplace_spots
+      - light.mid_room_spots
+      - light.kitchen_spots
+      - light.dinner_table_lights
 
   kitchen_lights:
     name: Kitchen Lights
     entities:
-      - light.kitchen_spots_level
-      - light.dinner_table_lights_level
+      - light.kitchen_spots
+      - light.dinner_table_lights
 
   office_lights:
     name: Office Lights
     entities:
-      - light.office_spots_level  
+      - light.office_spots 
 
   weather:
     name: Weather

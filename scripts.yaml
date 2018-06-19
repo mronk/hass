@@ -1,0 +1,14 @@
+  toggle_downstairs_lights:
+    sequence:
+      - service_template: homeassistant.turn_{% if is_state('group.downstairs_lights', 'on') %}off{% else %}on{% endif %}
+        entity_id: group.downstairs_lights
+
+  toggle_living_room_lights:
+    sequence:
+      - service_template: homeassistant.turn_{% if is_state('group.living_room_lights', 'on') %}off{% else %}on{% endif %}
+        entity_id: group.living_room_lights
+
+  toggle_kitchen_lights:
+    sequence:
+      - service_template: homeassistant.turn_{% if is_state('group.kitchen_lights', 'on') %}off{% else %}on{% endif %}
+        entity_id: group.kitchen_lights

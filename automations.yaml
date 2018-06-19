@@ -1,4 +1,14 @@
-  - alias: Living Room Double-Click
+  - alias: Kitchen Spots Double-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.kitchen_spots
+        scene_id: 14
+    action:
+      service: script.toggle_kitchen_lights
+
+  - alias: Living Room Spots Double-Click
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -6,9 +16,17 @@
         entity_id: zwave.living_room_spots
         scene_id: 14
     action:
-      service_template: >
-        homeassistant.turn_{% if is_state('group.living_room_lights', 'on') %}off{% else %}on{% endif %}
-      entity_id: group.living_room_lights
+      service: script.toggle_living_room_lights
+
+  - alias: Mid Room Spots Double-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.mid_room_spots
+        scene_id: 14
+    action:
+      service: script.toggle_downstairs_lights
 
   - alias: Bedroom Double-Click
     trigger:
