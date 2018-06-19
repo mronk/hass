@@ -131,7 +131,7 @@ media_player.living_room_speaker:
   platform: cast
   unique_id: 29eefd60-acc9-7fed-992e-b7d0fe78d0d2
 light.living_room_spots:
-  name:
+  name: Living Room Spots
   platform: zwave
   unique_id: 4-72057594109853697
 light.living_room_spots_level_2:
@@ -179,7 +179,7 @@ sensor.living_room_spots_system:
   platform: zwave
   unique_id: 4-72057594111082689
 light.fireplace_spots:
-  name:
+  name: Fireplace Spots
   platform: zwave
   unique_id: 5-72057594126630913
 light.fireplace_spots_level_2:
@@ -227,7 +227,7 @@ sensor.fireplace_spots_system:
   platform: zwave
   unique_id: 5-72057594127859905
 light.mid_room_spots:
-  name:
+  name: Mid Room Spots
   platform: zwave
   unique_id: 6-72057594143408129
 light.mid_room_spots_level_2:
@@ -275,7 +275,7 @@ sensor.mid_room_spots_system:
   platform: zwave
   unique_id: 6-72057594144637121
 light.dinner_table_lights:
-  name:
+  name: Dinner Table Lights
   platform: zwave
   unique_id: 7-72057594160185345
 light.dinner_table_lights_level_2:
@@ -323,7 +323,7 @@ sensor.dinner_table_lights_system:
   platform: zwave
   unique_id: 7-72057594161414337
 light.kitchen_spots:
-  name:
+  name: Kitchen Spots
   platform: zwave
   unique_id: 8-72057594176962561
 light.kitchen_spots_level_2:
