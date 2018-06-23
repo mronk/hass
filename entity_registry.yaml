@@ -370,3 +370,55 @@ sensor.kitchen_spots_system:
   name:
   platform: zwave
   unique_id: 8-72057594178191553
+switch.hall_light:
+  name: Hall Light
+  platform: zwave
+  unique_id: 9-72057594193723392
+switch.frontdoor_light:
+  name: Frontdoor Light
+  platform: zwave
+  unique_id: 9-144115188231651328
+sensor.hall_light_energy:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936386
+sensor.hall_light_energy_2:
+  name:
+  platform: zwave
+  unique_id: 9-144115188231864322
+sensor.hall_light_power:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936514
+sensor.hall_light_exporting:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936896
+sensor.hall_light_power_2:
+  name:
+  platform: zwave
+  unique_id: 9-144115188231864450
+sensor.hall_light_exporting_2:
+  name:
+  platform: zwave
+  unique_id: 9-144115188231864832
+sensor.hall_light_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968577
+sensor.hall_light_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968593
+sensor.hall_light_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968609
+sensor.hall_light_heat:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968689
+sensor.hall_light_power_management:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968753

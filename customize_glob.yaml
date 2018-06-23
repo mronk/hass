@@ -12,3 +12,5 @@
       hidden: true
     "sensor.kitchen_spots_*":
       hidden: true
+    "sensor.hall_light_*":
+      hidden: true

@@ -25,6 +25,13 @@
     entities:
       - group.office_lights
 
+  hall_view:
+    name: Hall
+    icon: mdi:stairs
+    view: true
+    entities:
+      - group.hall_lights
+
   sensor_view:
     name: Sensors
     icon: mdi:sitemap
@@ -49,6 +56,7 @@
       - zwave.mid_room_spots
       - zwave.dinner_table_lights
       - zwave.kitchen_spots
+      - zwave.hall_light
 
   bedroom_lights:
     name: Bedroom Lights
@@ -93,6 +101,12 @@
     name: Office Lights
     entities:
       - light.office_spots 
+
+  hall_lights:
+    name: Hall Lights
+    entities:
+      - switch.hall_light
+      - switch.frontdoor_light 
 
   weather:
     name: Weather
