@@ -1,5 +1,5 @@
-  #living_area_view:
-  default_view:
+  living_area_view:
+  #default_view:
     name: Living Area
     icon: mdi:home
     view: true
@@ -57,6 +57,7 @@
       - zwave.dinner_table_lights
       - zwave.kitchen_spots
       - zwave.hall_light
+      - zwave.hallway_light
 
   bedroom_lights:
     name: Bedroom Lights
@@ -106,6 +107,7 @@
     name: Hall Lights
     entities:
       - switch.hall_light
+      - light.hallway_light
       - switch.frontdoor_light 
 
   weather:

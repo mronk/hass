@@ -3,11 +3,6 @@ climate.living_room:
   name: Nest
   platform: nest
   unique_id: Zfw_usJ3YUieDjr937Hul72N3SClpZuW
-media_player.ronkcast:
-  config_entry_id:
-  name: RonkCast
-  platform: cast
-  unique_id: 57a82e64-6a19-839f-b633-0949116fb60a
 media_player.chromecastle:
   config_entry_id:
   name:
@@ -603,3 +598,83 @@ zwave.hall_light:
   name:
   platform: zwave
   unique_id: node-9
+media_player.ronkcast:
+  config_entry_id: be7b08443bb6484eade8893a6256862b
+  name: RonkCast
+  platform: cast
+  unique_id: ccc59223-dd04-f568-22bf-1aa4b919be6e
+zwave.hallway_light:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-10
+light.hallway_light:
+  config_entry_id:
+  name: Hallway Light
+  platform: zwave
+  unique_id: 10-72057594210516993
+light.hallway_light_level_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-144115188248444929
+sensor.hallway_light_power:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210697282
+sensor.hallway_light_energy:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210713602
+sensor.hallway_light_power_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210713730
+sensor.hallway_light_exporting:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210714112
+sensor.hallway_light_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745793
+sensor.hallway_light_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745809
+sensor.hallway_light_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745825
+sensor.hallway_light_system:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745985
+sensor.hallway_light_heat:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745905
+sensor.hallway_light_power_management:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745969
+media_player.chrome:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: t5wlx73xg7mt8lb5y3bdagfh
+media_player.chrome_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 3jjh0z5shqa4xs965eegca54
