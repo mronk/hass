@@ -18,6 +18,8 @@
       hidden: true
     light.hallway_light_level_2:
       hidden: true
+    light.room_charlotte_light_level_2:
+      hidden: true
     sensor.living_room_thermostat_temperature:
       hidden: true
     sensor.living_room_thermostat_target:

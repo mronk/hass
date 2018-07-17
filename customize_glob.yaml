@@ -16,3 +16,5 @@
       hidden: true
     "sensor.hallway_light_*":
       hidden: true
+    "sensor.room_charlotte_light_*":
+      hidden: true

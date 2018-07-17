@@ -668,13 +668,68 @@ sensor.hallway_light_power_management:
   name:
   platform: zwave
   unique_id: 10-72057594211745969
-media_player.chrome:
+zwave.room_charlotte_light:
   config_entry_id:
   name:
-  platform: plex
-  unique_id: t5wlx73xg7mt8lb5y3bdagfh
-media_player.chrome_2:
+  platform: zwave
+  unique_id: node-11
+light.room_charlotte_light:
   config_entry_id:
   name:
-  platform: plex
-  unique_id: 3jjh0z5shqa4xs965eegca54
+  platform: zwave
+  unique_id: 11-72057594227294209
+light.room_charlotte_light_level_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-144115188265222145
+sensor.room_charlotte_light_power:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227474498
+sensor.room_charlotte_light_energy:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490818
+sensor.room_charlotte_light_power_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490946
+sensor.room_charlotte_light_exporting:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491328
+sensor.room_charlotte_light_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523009
+sensor.room_charlotte_light_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523025
+sensor.room_charlotte_light_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523041
+sensor.room_charlotte_light_heat:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523121
+sensor.room_charlotte_light_power_management:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523185
+sensor.room_charlotte_light_system:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523201

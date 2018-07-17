@@ -25,6 +25,13 @@
     entities:
       - group.office_lights
 
+  room_charlotte_view:
+    name: Office
+    icon: mdi:human-child
+    view: true
+    entities:
+      - group.room_charlotte_lights
+
   hall_view:
     name: Hall
     icon: mdi:stairs
@@ -59,12 +66,18 @@
       - zwave.kitchen_spots
       - zwave.hall_light
       - zwave.hallway_light
+      - zwave.room_charlotte_light
 
   bedroom_lights:
     name: Bedroom Lights
     entities:
       - light.bedroom_spots
       - light.nightlight_marvin
+
+  room_charlotte_lights:
+    name: Bedroom Lights
+    entities:
+      - light.room_charlotte_light
 
   living_room_nest:
     name: Living Room Nest
