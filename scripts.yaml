@@ -12,3 +12,8 @@
     sequence:
       - service_template: homeassistant.turn_{% if is_state('group.kitchen_lights', 'on') %}off{% else %}on{% endif %}
         entity_id: group.kitchen_lights
+
+  toggle_hall_lights:
+    sequence:
+      - service_template: homeassistant.turn_{% if is_state('group.hall_lights', 'on') %}off{% else %}on{% endif %}
+        entity_id: group.hall_lights

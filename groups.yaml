@@ -31,6 +31,7 @@
     view: true
     entities:
       - group.hall_lights
+      - switch.frontdoor_light
 
   sensor_view:
     name: Sensors
@@ -108,7 +109,6 @@
     entities:
       - switch.hall_light
       - light.hallway_light
-      - switch.frontdoor_light 
 
   weather:
     name: Weather
