@@ -675,7 +675,7 @@ zwave.room_charlotte_light:
   unique_id: node-11
 light.room_charlotte_light:
   config_entry_id:
-  name:
+  name: Room Charlotte Light
   platform: zwave
   unique_id: 11-72057594227294209
 light.room_charlotte_light_level_2:
