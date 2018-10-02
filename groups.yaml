@@ -1,5 +1,5 @@
-  living_area_view:
-  #default_view:
+  #living_area_view:
+  default_view:
     name: Living Area
     icon: mdi:home
     view: true
@@ -50,6 +50,7 @@
       - sensor.bedroom_remote_marvin
       - group.weather
       - group.zwave_devices
+      - group.meter_readings
       - group.all_automations
       - group.all_scripts
 
@@ -133,3 +134,15 @@
       - sensor.br_wind_direction
       - sensor.br_pressure
       - sensor.br_humidity
+
+  meter_readings:
+    name: Meter readings
+    entities:
+      - sensor.power_consumption
+      - sensor.power_tariff
+      - sensor.long_power_failure_count
+      - sensor.power_consumption_low
+      - sensor.power_consumption_normal
+      - sensor.power_production_low
+      - sensor.power_production_normal
+      - sensor.gas_consumption

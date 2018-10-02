@@ -1,10 +1,10 @@
 climate.living_room:
-  config_entry_id:
+  config_entry_id: f38a33a1299f4cc8ac6cc53b2d4b36d5
   name: Nest
   platform: nest
   unique_id: Zfw_usJ3YUieDjr937Hul72N3SClpZuW
 media_player.chromecastle:
-  config_entry_id:
+  config_entry_id: 3c4eb473b1c24e85b0f91b574ff08ca5
   name:
   platform: cast
   unique_id: 4f73b70f-26ba-d17a-98dc-39c16a4c13ff
@@ -154,7 +154,7 @@ sensor.bedroom_spots_system:
   platform: zwave
   unique_id: 3-72057594094305473
 media_player.living_room_speaker:
-  config_entry_id:
+  config_entry_id: 3c4eb473b1c24e85b0f91b574ff08ca5
   name:
   platform: cast
   unique_id: 29eefd60-acc9-7fed-992e-b7d0fe78d0d2
@@ -599,7 +599,7 @@ zwave.hall_light:
   platform: zwave
   unique_id: node-9
 media_player.ronkcast:
-  config_entry_id: be7b08443bb6484eade8893a6256862b
+  config_entry_id: 3c4eb473b1c24e85b0f91b574ff08ca5
   name: RonkCast
   platform: cast
   unique_id: ccc59223-dd04-f568-22bf-1aa4b919be6e
@@ -733,3 +733,68 @@ sensor.room_charlotte_light_system:
   name:
   platform: zwave
   unique_id: 11-72057594228523201
+media_player.chrome:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: f86uejogl2itgbydhghtym3m
+media_player.chrome_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: qyxt1mx347icfyo07b9kc7pz
+media_player.chrome_3:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: mqz4f9hnw08kyptwtgf78sv7
+media_player.lg_g6:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 8f85cf78b1bdb4cd-com-plexapp-android
+sensor.br_pressure_2:
+  config_entry_id:
+  name:
+  platform: buienradar
+  unique_id: 52.2589255.265608pressure
+sensor.br_humidity_2:
+  config_entry_id:
+  name:
+  platform: buienradar
+  unique_id: 52.2589255.265608humidity
+sensor.br_symbol_2:
+  config_entry_id:
+  name:
+  platform: buienradar
+  unique_id: 52.2589255.265608symbol
+sensor.br_temperature_2:
+  config_entry_id:
+  name:
+  platform: buienradar
+  unique_id: 52.2589255.265608temperature
+sensor.br_wind_force_2:
+  config_entry_id:
+  name:
+  platform: buienradar
+  unique_id: 52.2589255.265608windforce
+sensor.br_wind_direction_2:
+  config_entry_id:
+  name:
+  platform: buienradar
+  unique_id: 52.2589255.265608winddirection
+media_player.chrome_4:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 3928befld5f0srt38rl4c9i5
+media_player.chrome_5:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: vp8kouq0m7m40qoq8tvg93ud
+media_player.chrome_6:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 6wj6s4obbr952gwr9xccpxdw
