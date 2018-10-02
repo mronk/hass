@@ -1,0 +1,167 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 2
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Amsterdam
+  # Customization file
+  customize: !include customize.yaml
+  customize_glob: !include customize_glob.yaml
+
+zwave:
+  usb_path: /dev/zwave
+  #device_config: !include zwave_device_config.yaml
+  #network_key: !secret zwave_network_key
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+  sensors:
+    monitored_conditions:
+      - 'temperature'
+      - 'humidity'
+      - 'target'
+
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  client_id: !secret google_assistant_client_id
+  access_token: !secret google_assistant_access_token
+  agent_user_id: !secret google_assistant_agent_user_id
+  api_key: !secret google_assistant_api_key
+  exposed_domains:
+    - switch
+    - light
+  entity_config:
+    light.living_room_spots:
+      room: Living Room
+    light.living_room_spots_level_2:
+      expose: false
+    light.fireplace_spots:
+      room: Living Room
+    light.fireplace_spots_level_2:
+      expose: false
+    light.mid_room_spots:
+      room: Living Room
+    light.mid_room_spots_level_2:
+      expose: false
+    light.kitchen_spots:
+      room: Kitchen
+    light.kitchen_spots_level_2:
+      expose: false
+    light.dinner_table_lights:
+      room: Kitchen
+    light.dinner_table_lights_level_2:
+      expose: false
+    light.bedroom_spots:
+      room: Bedroom
+    light.bedroom_spots_level_2:
+      expose: false
+    light.office_spots:
+      room: Office
+    light.office_spots_level_2:
+      expose: false
+
+tradfri:
+  host: !secret tradfri_ip
+  allow_tradfri_groups: false
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_api_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  base_url: !secret http_base_url
+  ssl_certificate: !secret http_ssl_certificate
+  ssl_key: !secret http_ssl_key
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: buienradar
+    monitored_conditions:
+    - symbol
+    - temperature
+    - windforce
+    - winddirection
+    - pressure
+    - humidity
+  - platform: dsmr
+    port: /dev/p1
+    dsmr_version: 5
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_bot_token
+    allowed_chat_ids:
+      - !secret telegram_marvin_chat_id
+
+notify:
+  - name: marvin_telegram
+    platform: telegram
+    chat_id: !secret telegram_marvin_chat_id
+
+influxdb:
+  host: !secret influxdb_ip
+  tags:
+    source: hass
+
+device_tracker:
+  # - platform: nmap_tracker
+  #   new_device_defaults:
+  #     track_new_devices: true
+  #     hide_if_away: false
+  #   hosts:
+  #     - !secret phone_marvin_ip
+  #     - !secret phone_marloes_ip
+  - platform: owntracks_http
+
+group: !include groups.yaml
+script: !include scripts.yaml
+automation: !include automations.yaml
