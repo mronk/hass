@@ -84,9 +84,9 @@ http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_api_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: !secret http_base_url
-  ssl_certificate: !secret http_ssl_certificate
-  ssl_key: !secret http_ssl_key
+  # base_url: !secret http_base_url
+  # ssl_certificate: !secret http_ssl_certificate
+  # ssl_key: !secret http_ssl_key
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -125,9 +125,9 @@ sensor:
     - winddirection
     - pressure
     - humidity
-  - platform: dsmr
-    port: /dev/p1
-    dsmr_version: 5
+  # - platform: dsmr
+  #   port: /dev/p1
+  #   dsmr_version: 5
 
 # Text to speech
 tts:
@@ -147,10 +147,10 @@ notify:
     platform: telegram
     chat_id: !secret telegram_marvin_chat_id
 
-influxdb:
-  host: !secret influxdb_ip
-  tags:
-    source: hass
+# influxdb:
+#   host: !secret influxdb_ip
+#   tags:
+#     source: hass
 
 device_tracker:
   # - platform: nmap_tracker

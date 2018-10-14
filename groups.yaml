@@ -1,6 +1,6 @@
   #living_area_view:
   default_view:
-    name: Living Area
+    name: Living area
     icon: mdi:home
     view: true
     entities:
@@ -70,18 +70,18 @@
       - zwave.room_charlotte_light
 
   bedroom_lights:
-    name: Bedroom Lights
+    name: Bedroom lights
     entities:
       - light.bedroom_spots
       - light.nightlight_marvin
 
   room_charlotte_lights:
-    name: Bedroom Lights
+    name: Charlotte lights
     entities:
       - light.room_charlotte_light
 
   living_room_nest:
-    name: Living Room Nest
+    name: Living room Nest
     entities:
       - climate.living_room
       - sensor.living_room_thermostat_humidity
@@ -90,7 +90,7 @@
       - binary_sensor.hallway_nest_protect_online
 
   living_room_lights:
-    name: Living Room Lights
+    name: Living room lights
     entities:
       - light.living_room_spots
       - light.fireplace_spots
@@ -108,18 +108,18 @@
       - light.dinner_table_lights
 
   kitchen_lights:
-    name: Kitchen Lights
+    name: Kitchen lights
     entities:
       - light.kitchen_spots
       - light.dinner_table_lights
 
   office_lights:
-    name: Office Lights
+    name: Office lights
     entities:
       - light.office_spots 
 
   hall_lights:
-    name: Hall Lights
+    name: Hall lights
     entities:
       - switch.hall_light
       - light.hallway_light
