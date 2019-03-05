@@ -18,6 +18,17 @@
     action:
       service: script.toggle_living_room_lights
 
+  - alias: Fire Place Spots Double-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.fireplace_spots
+        scene_id: 14
+    action:
+      service: light.toggle
+      entity_id: light.oil_drum_light
+
   - alias: Mid Room Spots Double-Click
     trigger:
       platform: event
@@ -27,6 +38,17 @@
         scene_id: 14
     action:
       service: script.toggle_downstairs_lights
+
+  - alias: Dinner Table Light Double-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.dinner_table_lights
+        scene_id: 14
+    action:
+      service: switch.toggle
+      entity_id: switch.lantern
 
   - alias: Bedroom Double-Click
     trigger:
@@ -39,6 +61,16 @@
       service_template: >
         homeassistant.turn_{% if is_state('group.bedroom_lights', 'on') %}off{% else %}on{% endif %}
       entity_id: group.bedroom_lights
+
+  - alias: Room Charlotte Double-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.room_charlotte_light
+        scene_id: 14
+    action:
+      service: script.toggle_charlotte_brightness
 
   - alias: Bedroom 2nd Button Single-Click
     trigger:
@@ -61,6 +93,18 @@
     action:
      service: homeassistant.turn_off
      entity_id: group.all_lights
+
+  - alias: Office Double-Click
+    trigger:
+      platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id: zwave.office_spots
+        scene_id: 14
+    action:
+      service_template: >
+        homeassistant.turn_{% if is_state('group.office_lights', 'on') %}off{% else %}on{% endif %}
+      entity_id: group.office_lights
 
   - alias: Hall Light Double-Click
     trigger:

@@ -17,3 +17,19 @@
     sequence:
       - service_template: homeassistant.turn_{% if is_state('group.hall_lights', 'on') %}off{% else %}on{% endif %}
         entity_id: group.hall_lights
+
+  toggle_office_lights:
+    sequence:
+      - service_template: homeassistant.turn_{% if is_state('group.office_lights', 'on') %}off{% else %}on{% endif %}
+        entity_id: group.office_lights
+
+  toggle_charlotte_brightness:
+    sequence:
+      - service: scene.turn_on
+        data_template:
+          entity_id: >
+            {% if states.light.room_charlotte_light.attributes.brightness|default(0) == 200 %}
+              scene.charlotte_sleep
+            {% else %}
+              scene.charlotte_bright
+            {% endif %}

@@ -28,44 +28,48 @@ nest:
       - 'humidity'
       - 'target'
 
-google_assistant:
-  project_id: !secret google_assistant_project_id
-  client_id: !secret google_assistant_client_id
-  access_token: !secret google_assistant_access_token
-  agent_user_id: !secret google_assistant_agent_user_id
-  api_key: !secret google_assistant_api_key
-  exposed_domains:
-    - switch
-    - light
-  entity_config:
-    light.living_room_spots:
-      room: Living Room
-    light.living_room_spots_level_2:
-      expose: false
-    light.fireplace_spots:
-      room: Living Room
-    light.fireplace_spots_level_2:
-      expose: false
-    light.mid_room_spots:
-      room: Living Room
-    light.mid_room_spots_level_2:
-      expose: false
-    light.kitchen_spots:
-      room: Kitchen
-    light.kitchen_spots_level_2:
-      expose: false
-    light.dinner_table_lights:
-      room: Kitchen
-    light.dinner_table_lights_level_2:
-      expose: false
-    light.bedroom_spots:
-      room: Bedroom
-    light.bedroom_spots_level_2:
-      expose: false
-    light.office_spots:
-      room: Office
-    light.office_spots_level_2:
-      expose: false
+recorder:
+  purge_keep_days: 180
+  db_url: mysql://root:root@192.168.178.5/homeassistant?charset=utf8
+
+# google_assistant:
+#   project_id: !secret google_assistant_project_id
+#   client_id: !secret google_assistant_client_id
+#   access_token: !secret google_assistant_access_token
+#   agent_user_id: !secret google_assistant_agent_user_id
+#   api_key: !secret google_assistant_api_key
+#   exposed_domains:
+#     - switch
+#     - light
+#   entity_config:
+#     light.living_room_spots:
+#       room: Living Room
+#     light.living_room_spots_level_2:
+#       expose: false
+#     light.fireplace_spots:
+#       room: Living Room
+#     light.fireplace_spots_level_2:
+#       expose: false
+#     light.mid_room_spots:
+#       room: Living Room
+#     light.mid_room_spots_level_2:
+#       expose: false
+#     light.kitchen_spots:
+#       room: Kitchen
+#     light.kitchen_spots_level_2:
+#       expose: false
+#     light.dinner_table_lights:
+#       room: Kitchen
+#     light.dinner_table_lights_level_2:
+#       expose: false
+#     light.bedroom_spots:
+#       room: Bedroom
+#     light.bedroom_spots_level_2:
+#       expose: false
+#     light.office_spots:
+#       room: Office
+#     light.office_spots_level_2:
+#       expose: false
 
 tradfri:
   host: !secret tradfri_ip
@@ -74,6 +78,8 @@ tradfri:
 # Show links to resources in log and frontend
 # introduction:
 
+system_health:
+
 # Enables the frontend
 frontend:
 
@@ -81,12 +87,6 @@ frontend:
 config:
 
 http:
-  # Secrets are defined in the file secrets.yaml
-  api_password: !secret http_api_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: !secret http_base_url
-  # ssl_certificate: !secret http_ssl_certificate
-  # ssl_key: !secret http_ssl_key
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -125,6 +125,7 @@ sensor:
     - winddirection
     - pressure
     - humidity
+  # TODO: Enable P1
   # - platform: dsmr
   #   port: /dev/p1
   #   dsmr_version: 5
@@ -147,21 +148,14 @@ notify:
     platform: telegram
     chat_id: !secret telegram_marvin_chat_id
 
-# influxdb:
-#   host: !secret influxdb_ip
-#   tags:
-#     source: hass
-
-device_tracker:
-  # - platform: nmap_tracker
-  #   new_device_defaults:
-  #     track_new_devices: true
-  #     hide_if_away: false
-  #   hosts:
-  #     - !secret phone_marvin_ip
-  #     - !secret phone_marloes_ip
-  - platform: owntracks_http
+influxdb:
+  host: !secret influxdb_ip
+  port: !secret influxdb_port
+  database: homeassistant
+  tags:
+    source: hass
 
 group: !include groups.yaml
 script: !include scripts.yaml
 automation: !include automations.yaml
+scene: !include scenes.yaml

@@ -1,0 +1,37 @@
+  - name: Movie
+    entities:
+      light.living_room_spots:
+        state: true
+        brightness: 10
+      light.fireplace_spots:
+        state: true
+        brightness: 10
+      light.mid_room_spots:
+        state: true
+        brightness: 10
+      light.oil_drum_light:
+        state: true
+        brightness: 10
+  - name: Movie Marvin
+    entities:
+      group.kitchen_lights: false
+      light.living_room_spots: false
+      light.fireplace_spots:
+        state: true
+        brightness: 10
+      light.mid_room_spots:
+        state: true
+        brightness: 10
+      light.oil_drum_light:
+        state: true
+        brightness: 10
+  - name: Charlotte Bright
+    entities:
+      light.room_charlotte_light:
+        state: true
+        brightness: 200
+  - name: Charlotte Sleep
+    entities:
+      light.room_charlotte_light:
+        state: true
+        brightness: 20
