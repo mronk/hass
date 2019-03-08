@@ -18,3 +18,5 @@
       hidden: true
     "sensor.room_charlotte_light_*":
       hidden: true
+    "device_tracker.*":
+      hidden: true

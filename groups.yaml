@@ -8,6 +8,7 @@
       - group.kitchen_lights
       - media_player.ronkcast
       - media_player.living_room_speaker
+      - weather.eemnes
       - group.living_room_nest
       - group.scenes
 
@@ -15,7 +16,8 @@
     name: Scenes
     entities:
       - scene.movie
-      - scene.movie_marvin
+      - scene.movie_dark
+      - scene.living_room_dark_day
 
   bedroom_view:
     name: Bedroom
@@ -57,11 +59,25 @@
       - sensor.living_room_remote
       - sensor.bedroom_remote_marvin
       - sensor.office_remote
+      - person.marvin
+      - group.fitbit
       - group.weather
       - group.zwave_devices
       - group.meter_readings
       - group.all_automations
       - group.all_scripts
+      - sensor.living_room_speaker_alarm
+      - sensor.living_room_speaker_timer
+
+  fitbit:
+    name: Fitbit Marvin
+    entities:
+      - sensor.aria_battery
+      - sensor.charge_2_battery
+      - sensor.resting_heart_rate
+      - sensor.sleep_efficiency
+      - sensor.steps
+      - sensor.weight
 
   zwave_devices:
     name: Z-Wave devices
@@ -146,13 +162,8 @@
   weather:
     name: Weather
     entities:
+      - weather.eemnes
       - sun.sun
-      - sensor.br_symbol
-      - sensor.br_temperature
-      - sensor.br_wind_force
-      - sensor.br_wind_direction
-      - sensor.br_pressure
-      - sensor.br_humidity
 
   meter_readings:
     name: Meter readings

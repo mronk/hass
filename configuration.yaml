@@ -29,8 +29,8 @@ nest:
       - 'target'
 
 recorder:
-  purge_keep_days: 180
-  db_url: mysql://root:root@192.168.178.5/homeassistant?charset=utf8
+  purge_keep_days: 31
+  db_url: !secret recorder_url
 
 # google_assistant:
 #   project_id: !secret google_assistant_project_id
@@ -75,6 +75,11 @@ tradfri:
   host: !secret tradfri_ip
   allow_tradfri_groups: false
 
+googlehome:
+  devices:
+    - host: !secret googlehome_ip
+      track_alarms: true
+
 # Show links to resources in log and frontend
 # introduction:
 
@@ -87,6 +92,15 @@ frontend:
 config:
 
 http:
+  base_url: !secret http_base_url
+  trusted_networks:
+    - !secret network_subnet
+  trusted_proxies:
+    - !secret server_ip
+    - !secret router_ip
+  use_x_forwarded_for: true
+  ip_ban_enabled: true
+  login_attempts_threshold: 3
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -116,19 +130,34 @@ map:
 sun:
 
 # Weather prediction
-sensor:
+weather:
   - platform: buienradar
-    monitored_conditions:
-    - symbol
-    - temperature
-    - windforce
-    - winddirection
-    - pressure
-    - humidity
+    name: Eemnes
+
+# Sensors
+sensor:
+  - platform: fitbit
+    clock_format: 24H
+    monitored_resources:
+      - "body/weight"
+      - "activities/heart"
+      - "activities/steps"
+      - "devices/battery"
+      - "sleep/efficiency"
   # TODO: Enable P1
   # - platform: dsmr
   #   port: /dev/p1
   #   dsmr_version: 5
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts:
+      - !secret network_subnet
+    exclude:
+      - !secret server_ip
+      - !secret router_ip
+      - !secret ap_ip
+      - !secret hass_ip
 
 # Text to speech
 tts:
@@ -149,12 +178,13 @@ notify:
     chat_id: !secret telegram_marvin_chat_id
 
 influxdb:
-  host: !secret influxdb_ip
+  host: !secret server_ip
   port: !secret influxdb_port
   database: homeassistant
   tags:
     source: hass
 
+person: !include persons.yaml
 group: !include groups.yaml
 script: !include scripts.yaml
 automation: !include automations.yaml

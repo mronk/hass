@@ -18,9 +18,11 @@ deps
 tts
 secrets.yaml
 known_devices.yaml
+persons.yaml
 pyozw.sqlite
 ip_bans.yaml
 .*
 !/.gitignore
 config
 ozw_config
+__pycache__

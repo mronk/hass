@@ -28,8 +28,5 @@
       - service: scene.turn_on
         data_template:
           entity_id: >
-            {% if states.light.room_charlotte_light.attributes.brightness|default(0) == 200 %}
-              scene.charlotte_sleep
-            {% else %}
-              scene.charlotte_bright
-            {% endif %}
+            {% if states.light.room_charlotte_light.attributes.brightness|default(0) < 30 %}scene.charlotte_bright{% else %}scene.charlotte_sleep{% endif %}
+

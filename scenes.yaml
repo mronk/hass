@@ -12,7 +12,8 @@
       light.oil_drum_light:
         state: true
         brightness: 10
-  - name: Movie Marvin
+
+  - name: Movie Dark
     entities:
       group.kitchen_lights: false
       light.living_room_spots: false
@@ -25,11 +26,32 @@
       light.oil_drum_light:
         state: true
         brightness: 10
+
+  - name: Living Room Dark Day
+    entities:
+      light.living_room_spots:
+        state: true
+        brightness: 40
+      light.fireplace_spots:
+        state: true
+        brightness: 40
+      light.mid_room_spots:
+        state: true
+        brightness: 40
+      light.oil_drum_light:
+        state: true
+        brightness: 50
+      light.kitchen_spots:
+        state: true
+        brightness: 50
+      switch.lantern: true
+
   - name: Charlotte Bright
     entities:
       light.room_charlotte_light:
         state: true
         brightness: 200
+
   - name: Charlotte Sleep
     entities:
       light.room_charlotte_light:
