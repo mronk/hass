@@ -1,0 +1,114 @@
+    light.living_room_spots:
+      expose: true
+      name: Living room spots
+      aliases:
+        - Woonkamer spots
+      room: Living Room
+    light.fireplace_spots:
+      expose: true
+      name: Fireplace spots
+      aliases:
+        - Houtkachel spots
+        - Kachel spots
+      room: Living Room
+    light.mid_room_spots:
+      expose: true
+      name: Mid room spots
+      aliases:
+        - Center spots
+        - Midden spots
+      room: Living Room
+    light.kitchen_spots:
+      expose: true
+      name: Kitchen spots
+      aliases:
+        - Keuken spots
+      room: Kitchen
+    light.oil_drum_light:
+      expose: true
+      name: Oil drum light
+      aliases:
+        - Shaded lamp
+        - Schemerlamp
+      room: Living Room
+    light.dinner_table_lights:
+      expose: true
+      name: Dinner table spots
+      aliases:
+        - Eettafel verlichting
+        - Eettafel lamp
+      room: Kitchen
+    switch.lantern:
+      expose: true
+      name: Lantern
+      aliases:
+        - Lantaarn
+      room: Kitchen
+    light.office_spots:
+      expose: true
+      name: Office spots
+      aliases:
+        - Kantoor spots
+      room: Office
+    light.cabinet_light:
+      expose: true
+      name: Cabinet light
+      aliases:
+        - Kast verlichting
+        - Kast lamp
+      room: Office
+    light.corner_light:
+      expose: true
+      name: Corner light
+      aliases:
+        - Hoek verlichting
+        - Hoek lamp
+      room: Office
+    switch.hall_light:
+      expose: true
+      name: Hall light
+      room: Hallway
+    light.hallway_light:
+      expose: true
+      name: Hallway light
+      room: Hallway
+    switch.frontdoor_light:
+      expose: true
+      name: Frontdoor light
+      aliases:
+        - Voordeur verlichting
+        - Voordeur lamp
+      room: Hallway
+    light.bedroom_spots:
+      expose: true
+      name: Bedroom spots
+      aliases:
+        - Slaapkamer spots
+      room: Bedroom
+    light.nightlight_marvin:
+      expose: true
+      name: Nighlight
+      aliases:
+        - Nighlight Marvin
+        - Marvin nighlight
+        - Nachtlamp Marvin
+        - Marvin nachtlamp
+        - Nachtlamp
+      room: Bedroom
+    light.room_charlotte_light:
+      expose: true
+      name: Charlotte light
+      aliases:
+        - Charlotte verlichting
+        - Charlotte lamp
+        - Verlichting Charlotte
+        - Lamp Charlotte
+      room: Charlotte
+    scene.livingroom_movie:
+      expose: true
+      name: Movie
+      aliases:
+        - Movie scene
+        - Film
+        - Film scene
+      room: Living Room

@@ -1,4 +1,5 @@
   - alias: Kitchen Spots Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -9,6 +10,7 @@
       service: script.toggle_downstairs_lights
 
   - alias: Living Room Spots Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -19,6 +21,7 @@
       service: script.toggle_living_room_lights
 
   - alias: Fire Place Spots Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -30,6 +33,7 @@
       entity_id: light.oil_drum_light
 
   - alias: Mid Room Spots Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -40,6 +44,7 @@
       service: script.toggle_downstairs_lights
 
   - alias: Dinner Table Light Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -51,6 +56,7 @@
       entity_id: switch.lantern
 
   - alias: Bedroom Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -63,6 +69,7 @@
       entity_id: group.bedroom_lights
 
   - alias: Room Charlotte Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -73,6 +80,7 @@
       service: script.toggle_charlotte_brightness
 
   - alias: Bedroom 2nd Button Single-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -84,6 +92,7 @@
       entity_id: light.nightlight_marvin
 
   - alias: Bedroom 2nd Button Triple-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -95,6 +104,7 @@
      entity_id: group.all_lights
 
   - alias: Office Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -107,6 +117,7 @@
       entity_id: group.office_lights
 
   - alias: Hall Light Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -117,6 +128,7 @@
       service: script.toggle_hall_lights
 
   - alias: Hallway Light Double-Click
+    initial_state: true
     trigger:
       platform: event
       event_type: zwave.scene_activated
@@ -131,6 +143,7 @@
  #         message: 'Lights toggled'
 
   - alias: Telegram start
+    initial_state: false
     trigger:
       platform: event
       event_type: telegram_command
@@ -145,6 +158,7 @@
             - '/lights'
 
   - alias: Telegram light control
+    initial_state: false
     trigger:
       platform: event
       event_type: telegram_command
@@ -154,3 +168,45 @@
       service: homeassistant.toggle
       entity_id:
         - group.living_room_lights
+
+  - alias: Away Mode Lights ON
+    initial_state: true
+    trigger:
+      - platform: time_pattern
+        minutes: '/15'
+    condition:
+      - condition: state
+        entity_id: input_boolean.away
+        state: 'on'
+      - condition: sun
+        after: sunset
+      - condition: state
+        entity_id: group.living_room_lights
+        state: 'off'
+    action:
+      - delay: '00:{{ range(1,14) | random | int }}:00'
+      - service: scene.turn_on
+        entity_id: scene.livingroom_evening
+      - service: notify.marvin_telegram
+        data:
+          message: 'Away mode: Lights on'
+
+  - alias: Away Mode Lights OFF
+    initial_state: true
+    trigger:
+      platform: time
+      at: '23:00:00'
+    condition:
+      - condition: state
+        entity_id: input_boolean.away
+        state: 'on'
+      - condition: state
+        entity_id: group.downstairs_lights
+        state: 'on'
+    action:
+      - delay: '00:{{ range(0,30) | random | int }}:00'
+      - service: homeassistant.turn_off
+        entity_id: group.downstairs_lights
+      - service: notify.marvin_telegram
+        data:
+          message: 'Away mode: Lights off'

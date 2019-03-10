@@ -1,4 +1,4 @@
-  - name: Movie
+  - name: Livingroom Movie
     entities:
       light.living_room_spots:
         state: true
@@ -12,8 +12,13 @@
       light.oil_drum_light:
         state: true
         brightness: 10
+      light.kitchen_spots:
+        state: true
+        brightness: 10
+      switch.lantern: true
+      light.dinner_table_lights: false
 
-  - name: Movie Dark
+  - name: Livingroom Movie Dark
     entities:
       group.kitchen_lights: false
       light.living_room_spots: false
@@ -27,23 +32,42 @@
         state: true
         brightness: 10
 
-  - name: Living Room Dark Day
+  - name: Livingroom Evening
     entities:
       light.living_room_spots:
         state: true
-        brightness: 40
+        brightness: 50
       light.fireplace_spots:
         state: true
-        brightness: 40
+        brightness: 50
       light.mid_room_spots:
         state: true
-        brightness: 40
+        brightness: 50
       light.oil_drum_light:
         state: true
-        brightness: 50
+        brightness: 60
       light.kitchen_spots:
         state: true
         brightness: 50
+      switch.lantern: true
+
+  - name: Livingroom Day
+    entities:
+      light.living_room_spots:
+        state: true
+        brightness: 120
+      light.fireplace_spots:
+        state: true
+        brightness: 120
+      light.mid_room_spots:
+        state: true
+        brightness: 120
+      light.oil_drum_light:
+        state: true
+        brightness: 150
+      light.kitchen_spots:
+        state: true
+        brightness: 120
       switch.lantern: true
 
   - name: Charlotte Bright

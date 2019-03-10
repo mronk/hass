@@ -14,6 +14,11 @@ homeassistant:
   customize: !include customize.yaml
   customize_glob: !include customize_glob.yaml
 
+logger:
+  default: warning
+  logs:
+    homeassistant.components.device_tracker.nmap_tracker: warning
+
 zwave:
   usb_path: /dev/zwave
   #device_config: !include zwave_device_config.yaml
@@ -32,44 +37,11 @@ recorder:
   purge_keep_days: 31
   db_url: !secret recorder_url
 
-# google_assistant:
-#   project_id: !secret google_assistant_project_id
-#   client_id: !secret google_assistant_client_id
-#   access_token: !secret google_assistant_access_token
-#   agent_user_id: !secret google_assistant_agent_user_id
-#   api_key: !secret google_assistant_api_key
-#   exposed_domains:
-#     - switch
-#     - light
-#   entity_config:
-#     light.living_room_spots:
-#       room: Living Room
-#     light.living_room_spots_level_2:
-#       expose: false
-#     light.fireplace_spots:
-#       room: Living Room
-#     light.fireplace_spots_level_2:
-#       expose: false
-#     light.mid_room_spots:
-#       room: Living Room
-#     light.mid_room_spots_level_2:
-#       expose: false
-#     light.kitchen_spots:
-#       room: Kitchen
-#     light.kitchen_spots_level_2:
-#       expose: false
-#     light.dinner_table_lights:
-#       room: Kitchen
-#     light.dinner_table_lights_level_2:
-#       expose: false
-#     light.bedroom_spots:
-#       room: Bedroom
-#     light.bedroom_spots_level_2:
-#       expose: false
-#     light.office_spots:
-#       room: Office
-#     light.office_spots_level_2:
-#       expose: false
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  api_key: !secret google_assistant_api_key
+  expose_by_default: false
+  entity_config: !include google_assistant_entity_config.yaml
 
 tradfri:
   host: !secret tradfri_ip
@@ -183,6 +155,22 @@ influxdb:
   database: homeassistant
   tags:
     source: hass
+
+media_player:
+  - platform: spotify
+    client_id: !secret spotify_client_id
+    client_secret: !secret spotify_client_secret
+    aliases:
+      29eefd60acc97fed992eb7d0fe78d0d2: Living Room speaker
+      ccc59223dd04f56822bf1aa4b919be6e: RonkCast
+      57e3675976d730e4c40812a0c378e98108243361: Marvin Phone
+      65446b7218f8ab1091cc2ae4f6e0cc94c33e3bb1: Marvin Ubuntu
+
+input_boolean:
+  away:
+    name: Away mode
+    initial: off
+    icon: mdi:exit-run
 
 person: !include persons.yaml
 group: !include groups.yaml
