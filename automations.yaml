@@ -246,3 +246,27 @@
       - service: notify.marvin_telegram
         data:
           message: 'Set Away mode: OFF'
+
+  - alias: 'Nest Protect Lights'
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: sensor.living_room_nest_protect_co_status
+        to: 'Emergency'
+      - platform: state
+        entity_id: sensor.living_room_nest_protect_smoke_status
+        to: 'Emergency'
+      - platform: state
+        entity_id: sensor.hallway_nest_protect_co_status
+        to: 'Emergency'
+      - platform: state
+        entity_id: sensor.hallway_nest_protect_smoke_status
+        to: 'Emergency'
+    action:
+      - service: light.turn_on
+        data:
+          entity_id: group.all_lights
+          brightness: 255
+      - service: switch.turn_on
+        data:
+          entity_id: switch.hall_light

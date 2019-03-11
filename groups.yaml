@@ -71,6 +71,7 @@
       - group.all_scripts
       - sensor.living_room_speaker_alarm
       - sensor.living_room_speaker_timer
+      - group.nest_protect
 
   all_persons:
     name: Persons
@@ -128,6 +129,19 @@
       - binary_sensor.living_room_thermostat_online
       - binary_sensor.living_room_nest_protect_online
       - binary_sensor.hallway_nest_protect_online
+
+  nest_protect:
+    name: Nest Protect
+    entities:
+      - binary_sensor.living_room_thermostat_online
+      - binary_sensor.living_room_nest_protect_online
+      - sensor.living_room_nest_protect_battery_health
+      - sensor.living_room_nest_protect_co_status
+      - sensor.living_room_nest_protect_smoke_status
+      - binary_sensor.hallway_nest_protect_online
+      - sensor.hallway_nest_protect_battery_health
+      - sensor.hallway_nest_protect_co_status
+      - sensor.hallway_nest_protect_smoke_status
 
   living_room_lights:
     name: Living room lights

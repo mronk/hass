@@ -85,6 +85,9 @@ nest:
       - 'temperature'
       - 'humidity'
       - 'target'
+      - 'co_status'
+      - 'smoke_status'
+      - 'battery_health'
 
 google_assistant:
   project_id: !secret google_assistant_project_id
