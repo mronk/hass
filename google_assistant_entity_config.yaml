@@ -112,3 +112,33 @@
         - Film
         - Film scene
       room: Living Room
+    scene.livingroom_movie_dark:
+      expose: true
+      name: Movie dark
+      aliases:
+        - Dark movie
+        - Dark movie scene
+        - Movie dark scene
+        - Film donker
+        - Film donker scene
+        - Donkere film
+        - Donkere film scene
+      room: Living Room
+    scene.livingroom_evening:
+      expose: true
+      name: Evening
+      aliases:
+        - Evening scene
+        - Avond
+        - Avond scene
+      room: Living Room
+    scene.livingroom_day:
+      expose: true
+      name: Day
+      aliases:
+        - Day scene
+        - Overdag
+        - Overdag scene
+        - Dag
+        - Dag scene
+      room: Living Room
