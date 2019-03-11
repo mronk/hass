@@ -12,6 +12,7 @@
       - group.living_room_nest
       - group.livingroom_scenes
       - input_boolean.away
+      - group.all_persons
 
   livingroom_scenes:
     name: Scenes
@@ -61,8 +62,6 @@
       - sensor.living_room_remote
       - sensor.bedroom_remote_marvin
       - sensor.office_remote
-      - person.marvin
-      - person.marloes
       - media_player.spotify
       - group.fitbit
       - group.weather
@@ -72,6 +71,12 @@
       - group.all_scripts
       - sensor.living_room_speaker_alarm
       - sensor.living_room_speaker_timer
+
+  all_persons:
+    name: Persons
+    entities:
+      - person.marvin
+      - person.marloes
 
   fitbit:
     name: Fitbit Marvin

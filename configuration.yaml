@@ -19,38 +19,14 @@ logger:
   logs:
     homeassistant.components.device_tracker.nmap_tracker: warning
 
-zwave:
-  usb_path: /dev/zwave
-  #device_config: !include zwave_device_config.yaml
-  #network_key: !secret zwave_network_key
-
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_client_secret
-  sensors:
-    monitored_conditions:
-      - 'temperature'
-      - 'humidity'
-      - 'target'
-
 recorder:
   purge_keep_days: 31
   db_url: !secret recorder_url
 
-google_assistant:
-  project_id: !secret google_assistant_project_id
-  api_key: !secret google_assistant_api_key
-  expose_by_default: false
-  entity_config: !include google_assistant_entity_config.yaml
-
-tradfri:
-  host: !secret tradfri_ip
-  allow_tradfri_groups: false
-
-googlehome:
-  devices:
-    - host: !secret googlehome_ip
-      track_alarms: true
+zwave:
+  usb_path: /dev/zwave
+  #device_config: !include zwave_device_config.yaml
+  #network_key: !secret zwave_network_key
 
 # Show links to resources in log and frontend
 # introduction:
@@ -100,6 +76,30 @@ map:
 
 # Track the sun
 sun:
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+  sensors:
+    monitored_conditions:
+      - 'temperature'
+      - 'humidity'
+      - 'target'
+
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  api_key: !secret google_assistant_api_key
+  expose_by_default: false
+  entity_config: !include google_assistant_entity_config.yaml
+
+tradfri:
+  host: !secret tradfri_ip
+  allow_tradfri_groups: false
+
+googlehome:
+  devices:
+    - host: !secret googlehome_ip
+      track_alarms: true
 
 # Weather prediction
 weather:
@@ -169,7 +169,6 @@ media_player:
 input_boolean:
   away:
     name: Away mode
-    initial: off
     icon: mdi:exit-run
 
 person: !include persons.yaml
