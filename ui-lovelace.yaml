@@ -1,0 +1,228 @@
+title: Home
+resources:
+  - url: /local/slider-entity-row.js
+    type: js
+  - url: /local/group-card.js
+    type: js
+views:
+  - title: Home
+    icon: mdi:home
+    path: home
+    cards:
+      - type: entities
+        title: Lights
+        show_header_toggle: true
+        entities:
+          - type: section
+            label: Living Room
+          - type: custom:slider-entity-row
+            entity: light.living_room_spots
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.fireplace_spots
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.mid_room_spots
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.oil_drum_light
+            toggle: true
+          - type: section
+            label: Kitchen
+          - type: custom:slider-entity-row
+            entity: light.kitchen_spots
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.dinner_table_lights
+            toggle: true
+          - switch.lantern
+      - type: thermostat
+        entity: climate.living_room
+      - type: weather-forecast
+        entity: weather.eemnes
+      - type: entities
+        title: Home / Away status
+        show_header_toggle: false
+        entities:
+          - input_boolean.away
+          - person.marvin
+          - person.marloes
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: scene.livingroom_day
+            name: Day
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.livingroom_day
+          - type: entity-button
+            entity: scene.livingroom_evening
+            name: Evening
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.livingroom_evening
+          - type: entity-button
+            entity: scene.livingroom_movie
+            name: Movie
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.livingroom_movie
+          - type: entity-button
+            entity: scene.livingroom_movie_dark
+            name: Dark
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.livingroom_movie_dark
+      - type: media-control
+        entity: media_player.ronkcast
+      - type: media-control
+        entity: media_player.living_room_speaker
+
+  - title: Bedroom
+    icon: mdi:hotel
+    path: bedroom
+    cards:
+      - type: entities
+        title: Lights
+        show_header_toggle: true
+        entities:
+          - type: custom:slider-entity-row
+            entity: light.bedroom_spots
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.nightlight_marvin
+            toggle: true
+      - type: media-control
+        entity: media_player.chromecastle
+
+  - title: Office
+    icon: mdi:monitor
+    path: office
+    cards:
+      - type: entities
+        title: Lights
+        show_header_toggle: true
+        entities:
+          - type: custom:slider-entity-row
+            entity: light.office_spots
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.cabinet_light
+            toggle: true
+          - type: custom:slider-entity-row
+            entity: light.corner_light
+            toggle: true
+
+  - title: Charlotte
+    icon: mdi:human-child
+    path: charlotte
+    cards:
+      - type: entities
+        title: Lights
+        show_header_toggle: false
+        entities:
+          - type: custom:slider-entity-row
+            entity: light.room_charlotte_light
+            toggle: true
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: scene.charlotte_sleep
+            name: Sleep
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.charlotte_sleep
+          - type: entity-button
+            entity: scene.charlotte_bright
+            name: Bright
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.charlotte_bright
+
+  - title: Hall
+    icon: mdi:stairs
+    path: hall
+    cards:
+      - type: entities
+        title: Lights
+        show_header_toggle: false
+        entities:
+          - type: section
+            label: Hall / Hallway
+          - switch.hall_light
+          - type: custom:slider-entity-row
+            entity: light.hallway_light
+            toggle: true
+          - type: section
+            label: Outside
+          - switch.frontdoor_light
+
+  - title: Sensors
+    icon: mdi:sitemap
+    path: sensors
+    cards:
+      - type: custom:group-card
+        card:
+          type: entities
+          title: Fitbit
+        group: group.fitbit
+      - type: custom:group-card
+        card:
+          type: entities
+          title: Z-Wave Devices
+        group: group.zwave_devices
+      - type: custom:group-card
+        card:
+          type: entities
+          title: Nest Protect
+        group: group.nest_protect
+      - type: custom:group-card
+        card:
+          type: entities
+          title: All Automations
+        group: group.all_automations
+      - type: custom:group-card
+        card:
+          type: entities
+          title: All Scripts
+        group: group.all_scripts
+      - type: media-control
+        entity: media_player.spotify
+      # - type: custom:group-card
+      #   card:
+      #     type: entities
+      #     title: P1 Meter Readings
+      #   group: group.meter_readings
+      - type: custom:group-card
+        card:
+          type: entities
+          title: Weather
+        group: group.weather
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.living_room_remote
+          - type: gauge
+            entity: sensor.bedroom_remote_marvin
+          - type: gauge
+            entity: sensor.office_remote
+      - type: entities
+        title: Other
+        show_header_toggle: false
+        entities:
+          - sensor.living_room_speaker_alarm
+          - sensor.living_room_speaker_timer
+
+

@@ -11,8 +11,7 @@
       - weather.eemnes
       - group.living_room_nest
       - group.livingroom_scenes
-      - input_boolean.away
-      - group.all_persons
+      - group.home_away_status
 
   livingroom_scenes:
     name: Scenes
@@ -58,7 +57,6 @@
     icon: mdi:sitemap
     view: true
     entities:
-      - device_tracker.marvin_g5plus
       - sensor.living_room_remote
       - sensor.bedroom_remote_marvin
       - sensor.office_remote
@@ -76,6 +74,13 @@
   all_persons:
     name: Persons
     entities:
+      - person.marvin
+      - person.marloes
+
+  home_away_status:
+    name: Home / Away status
+    entities:
+      - input_boolean.away
       - person.marvin
       - person.marloes
 
