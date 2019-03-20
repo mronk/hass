@@ -15,26 +15,32 @@ views:
         entities:
           - type: section
             label: Living Room
+          - entity: light.living_room_spots
           - type: custom:slider-entity-row
             entity: light.living_room_spots
-            toggle: true
+            full_row: true
+          - entity: light.fireplace_spots
           - type: custom:slider-entity-row
             entity: light.fireplace_spots
-            toggle: true
+            full_row: true
+          - entity: light.mid_room_spots
           - type: custom:slider-entity-row
             entity: light.mid_room_spots
-            toggle: true
+            full_row: true
+          - entity: light.oil_drum_light
           - type: custom:slider-entity-row
             entity: light.oil_drum_light
-            toggle: true
+            full_row: true
           - type: section
             label: Kitchen
+          - entity: light.kitchen_spots
           - type: custom:slider-entity-row
             entity: light.kitchen_spots
-            toggle: true
+            full_row: true
+          - entity: light.dinner_table_lights
           - type: custom:slider-entity-row
             entity: light.dinner_table_lights
-            toggle: true
+            full_row: true
           - switch.lantern
       - type: thermostat
         entity: climate.living_room
@@ -94,12 +100,14 @@ views:
         title: Lights
         show_header_toggle: true
         entities:
+          - entity: light.bedroom_spots
           - type: custom:slider-entity-row
             entity: light.bedroom_spots
-            toggle: true
+            full_row: true
+          - entity: light.nightlight_marvin
           - type: custom:slider-entity-row
             entity: light.nightlight_marvin
-            toggle: true
+            full_row: true
       - type: media-control
         entity: media_player.chromecastle
 
@@ -111,15 +119,18 @@ views:
         title: Lights
         show_header_toggle: true
         entities:
+          - entity: light.office_spots
           - type: custom:slider-entity-row
             entity: light.office_spots
-            toggle: true
+            full_row: true
+          - entity: light.cabinet_light
           - type: custom:slider-entity-row
             entity: light.cabinet_light
-            toggle: true
+            full_row: true
+          - entity: light.corner_light
           - type: custom:slider-entity-row
             entity: light.corner_light
-            toggle: true
+            full_row: true
 
   - title: Charlotte
     icon: mdi:human-child
@@ -129,9 +140,10 @@ views:
         title: Lights
         show_header_toggle: false
         entities:
+          - entity: light.room_charlotte_light
           - type: custom:slider-entity-row
             entity: light.room_charlotte_light
-            toggle: true
+            full_row: true
       - type: horizontal-stack
         cards:
           - type: entity-button
@@ -161,13 +173,11 @@ views:
         entities:
           - type: section
             label: Hall / Hallway
-          - switch.hall_light
-          - type: custom:slider-entity-row
-            entity: light.hallway_light
-            toggle: true
+          - entity: switch.hall_light
+          - entity: light.hallway_light
           - type: section
             label: Outside
-          - switch.frontdoor_light
+          - entity: switch.frontdoor_light
 
   - title: Sensors
     icon: mdi:sitemap
@@ -214,15 +224,51 @@ views:
         cards:
           - type: gauge
             entity: sensor.living_room_remote
+            severity:
+              green: 50
+              yellow: 25
+              red: 0
           - type: gauge
             entity: sensor.bedroom_remote_marvin
+            severity:
+              green: 50
+              yellow: 25
+              red: 0
           - type: gauge
             entity: sensor.office_remote
+            severity:
+              green: 50
+              yellow: 25
+              red: 0
       - type: entities
         title: Other
         show_header_toggle: false
         entities:
           - sensor.living_room_speaker_alarm
           - sensor.living_room_speaker_timer
-
-
+      - type: map
+        aspect_ratio: 16:9
+        default_zoom: 18
+        entities:
+          - person.marvin
+          # - person.marloes
+          - zone.home
+          - zone.opvang_charlotte
+          - zone.werk_marvin_haarlem
+          - zone.werk_marvin_amsterdam
+          - zone.werk_marloes
+      - type: entities
+        title: Marvin
+        show_header_toggle: false
+        entities:
+          - person.marvin
+          - device_tracker.192_168_178_13_80_58_f8_2f_61_e4 # Bluetooth
+          - device_tracker.80_58_f8_2f_61_e5 # Mac Adress
+          - device_tracker.marvin_motog5plus # Owntracks
+      - type: entities
+        title: Marloes
+        show_header_toggle: false
+        entities:
+          - person.marloes
+          - device_tracker.192_168_178_13_04_1b_6d_6c_30_d7 # Bluetooth
+          - device_tracker.04_1b_6d_c9_23_fe # Mac Adress

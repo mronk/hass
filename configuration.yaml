@@ -18,6 +18,7 @@ logger:
   default: warning
   logs:
     homeassistant.components.device_tracker.nmap_tracker: warning
+    homeassistant.components.device_tracker: info
 
 recorder:
   purge_keep_days: 31
@@ -27,6 +28,11 @@ zwave:
   usb_path: /dev/zwave
   #device_config: !include zwave_device_config.yaml
   #network_key: !secret zwave_network_key
+
+mqtt:
+  broker: !secret mqtt_ip
+  username: !secret mqtt_username
+  password: !secret mqtt_password
 
 # Show links to resources in log and frontend
 # introduction:
@@ -128,6 +134,7 @@ sensor:
   #   dsmr_version: 5
 
 device_tracker:
+  - platform: owntracks
   - platform: nmap_tracker
     hosts:
       - !secret network_subnet
@@ -182,3 +189,4 @@ group: !include groups.yaml
 script: !include scripts.yaml
 automation: !include automations.yaml
 scene: !include scenes.yaml
+zone: !include zones.yaml
