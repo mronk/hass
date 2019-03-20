@@ -180,8 +180,10 @@
         state: 'on'
       - condition: sun
         after: sunset
+      - condition: time
+        before: '23:00:00'
       - condition: state
-        entity_id: group.living_room_lights
+        entity_id: group.downstairs_lights
         state: 'off'
     action:
       - delay: '00:{{ range(1,14) | random | int }}:00'
@@ -198,7 +200,7 @@
     initial_state: true
     trigger:
       platform: time
-      at: '23:00:00'
+      at: '23:30:00'
     condition:
       - condition: state
         entity_id: input_boolean.away
