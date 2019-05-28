@@ -230,9 +230,9 @@
       - service: input_boolean.turn_on
         data:
           entity_id: input_boolean.away
-      - service: notify.marvin_telegram
-        data:
-          message: 'Set Away mode: ON'
+      # - service: notify.marvin_telegram
+      #   data:
+      #     message: 'Set Away mode: ON'
 
   - alias: 'Away Mode Off'
     initial_state: 'on'
@@ -245,9 +245,9 @@
       - service: input_boolean.turn_off
         data:
           entity_id: input_boolean.away
-      - service: notify.marvin_telegram
-        data:
-          message: 'Set Away mode: OFF'
+      # - service: notify.marvin_telegram
+      #   data:
+      #     message: 'Set Away mode: OFF'
 
   - alias: 'Nest Protect Lights'
     initial_state: 'on'

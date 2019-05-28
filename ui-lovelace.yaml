@@ -250,7 +250,7 @@ views:
         aspect_ratio: 16:9
         default_zoom: 18
         entities:
-          - person.marvin
+          - device_tracker.marvin_motog5plus
           # - person.marloes
           - zone.home
           - zone.opvang_charlotte

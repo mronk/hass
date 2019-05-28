@@ -1,0 +1,21 @@
+  # - name: Opvang Charlotte
+  #   latitude: 52.255208
+  #   longitude: 5.257164
+  #   #radius: 250
+  #   icon: mdi:school
+
+  - name: Werk Marvin Haarlem
+    latitude: 52.372154
+    longitude: 4.652330
+    icon: mdi:office-building
+
+  - name: Werk Marvin Amsterdam
+    latitude: 52.377682
+    longitude: 4.935978
+    icon: mdi:office-building
+
+  - name: Werk Marloes
+    latitude: 52.177465
+    longitude: 5.410466
+    icon: mdi:office-building
+
